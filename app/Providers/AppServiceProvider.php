@@ -6,6 +6,7 @@ use App\Models\LeaveRequest;
 use App\Models\OtRequest;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
