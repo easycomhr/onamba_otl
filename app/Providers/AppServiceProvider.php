@@ -13,6 +13,9 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
         View::composer('layouts.admin', function ($view) {
             $view->with([
                 'sidebarOtPending'    => OtRequest::pending()->count(),
